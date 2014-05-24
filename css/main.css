@@ -1,0 +1,69 @@
+@font-face {
+    font-family: "Myriad Pro";
+    src: url(../fonts/myriad-pro.otf) format("truetype");
+}
+@font-face {
+    font-family: "Century Gothic";
+    src: url(../fonts/century-gothic.ttf) format("truetype");
+}
+
+body {
+    font-family: "Myriad Pro";
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Century Gothic";
+    font-weight: 400;
+}
+
+#main .content {
+    display: table;
+    margin: 0 auto;
+}
+
+#main h1 {
+    font-size: 60px;
+    margin-top: 50px;
+}
+
+#main img {
+    margin: 24px auto;
+    display: block;
+    border-radius: 50%;
+}
+
+#main h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+#navigation {
+    background: #00aeef;
+    color: #fff;
+}
+
+.navigation-bar {
+    list-style: none;
+    display: table;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.navigation-bar li {
+    font-size: 24px;
+    display: inline-block;
+    padding: 20px 40px;
+}
+
+@media screen and (max-width: 768px) {
+    .navigation-bar li {
+        font-size: 20px;
+        padding: 15px 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navigation-bar li {
+        display: block;
+    }
+}
