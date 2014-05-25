@@ -16,6 +16,10 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
 }
 
+.container {
+    padding: 20px 0;
+}
+
 #main .content {
     display: table;
     margin: 0 auto;
@@ -39,12 +43,10 @@ h1, h2, h3, h4, h5, h6 {
 
 #navigation {
     background: #00aeef;
-    color: #fff;
 }
 
 .navigation-bar {
     list-style: none;
-    display: table;
     margin: 0 auto;
     padding: 0;
 }
@@ -53,6 +55,12 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 24px;
     display: inline-block;
     padding: 20px 40px;
+    color: #fff;
+}
+
+.navigation-bar li:hover {
+    background: #fff;
+    color: #00aeef;
 }
 
 @media screen and (max-width: 768px) {
