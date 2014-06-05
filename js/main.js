@@ -6,7 +6,7 @@ function calculateHeight() {
     $('#main > div').height(h);
     $('#main img').height(h/2);
 }
-
+/*
 $(function() {
     $('a[href*=#]:not([href=#])').click(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -21,3 +21,4 @@ $(function() {
         }
     });
 });
+*/
