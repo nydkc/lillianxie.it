@@ -1,6 +1,12 @@
 @font-face {
     font-family: "Myriad Pro";
+    font-weight: 400;
     src: url(../fonts/myriad-pro.otf) format("truetype");
+}
+@font-face {
+    font-family: "Myriad Pro";
+    font-weight: 700;
+    src: url(../fonts/myriad-pro-bold.otf) format("truetype");
 }
 @font-face {
     font-family: "Century Gothic";
@@ -45,6 +51,18 @@ h1, h2, h3, h4, h5, h6 {
     background: #00aeef;
 }
 
+#navigation.affix {
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#navigation.affix li a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 .navigation-bar {
     list-style: none;
     margin: 0 auto;
@@ -52,25 +70,33 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navigation-bar li {
-    font-size: 24px;
     display: inline-block;
+}
+
+.navigation-bar li a {
+    font-size: 24px;
     padding: 20px 40px;
+}
+ 
+.navigation-bar li a,
+.navigation-bar li a:hover {
+    background: #00aeef;
     color: #fff;
 }
 
-.navigation-bar li:hover {
+.navigation-bar li.active a {
     background: #fff;
     color: #00aeef;
 }
 
 @media screen and (max-width: 768px) {
-    .navigation-bar li {
+    .navigation-bar li a {
         font-size: 20px;
         padding: 15px 30px;
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 490px) {
     .navigation-bar li {
         display: block;
     }
