@@ -45,13 +45,13 @@
                 <h1 class="text-center">Vision</h1>
                 <div class="row">
                     <div class="col-md-4">
-                        <img src="//placehold.it/400x400" class="img-responsive img-rounded" />
+                        <img src="//placehold.it/370x370" class="img-responsive img-rounded" />
                     </div>
                     <div class="col-md-4">
-                        <img src="//placehold.it/400x400" class="img-responsive img-rounded" />
+                        <img src="//placehold.it/370x370" class="img-responsive img-rounded" />
                     </div>
                     <div class="col-md-4">
-                        <img src="//placehold.it/400x400" class="img-responsive img-rounded" />
+                        <img src="//placehold.it/370x370" class="img-responsive img-rounded" />
                     </div>
                 </div>
                 <div class="row" style="margin-top: 40px;">
@@ -65,39 +65,41 @@
             <div id="gallery" class="container fade tab-pane">
                 <h1 class="text-center">Gallery</h1>
                 <div class="row">
-                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                    </ol>
+                    <div class="col-md-10 col-md-offset-1">
+                        <div id="photo-gallery" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#photo-gallery" data-slide-to="0" class="active"></li>
+                                <li data-target="#photo-gallery" data-slide-to="1"></li>
+                                <li data-target="#photo-gallery" data-slide-to="2"></li>
+                            </ol>
 
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner">
-                    {% for image in site.data.images %}
-                        {% if forloop.first %}
-                        <div class="item active">
-                            <img src="{{ image.url }}" alt="{{ image.description }}">
-                            <div class="carousel-caption">{{ image.description }}</div>
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner">
+                            {% for image in site.data.images %}
+                                {% if forloop.first %}
+                                <div class="item active">
+                                    <img src="{{ image.url }}" alt="{{ image.description }}">
+                                    <div class="carousel-caption">{{ image.description }}</div>
+                                </div>
+                                {% else %}
+                                <div class="item">
+                                    <img src="{{ image.url }}" alt="{{ image.description }}">
+                                    <div class="carousel-caption">{{ image.description }}</div>
+                                </div>
+                                {% endif %}
+                            {% endfor %}
+                            </div>
+
+                            <!-- Controls -->
+                            <a class="left carousel-control" href="#photo-gallery" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                            </a>
+                            <a class="right carousel-control" href="#photo-gallery" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
                         </div>
-                        {% else %}
-                        <div class="item">
-                            <img src="{{ image.url }}" alt="{{ image.description }}">
-                            <div class="carousel-caption">{{ image.description }}</div>
-                        </div>
-                        {% endif %}
-                    {% endfor %}
                     </div>
-
-                    <!-- Controls -->
-                    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                    </a>
-                    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                    </a>
-                </div>
                 </div>
             </div>
 
@@ -112,17 +114,5 @@
         <script>window.jQuery || document.write('<script src="js/jquery-1.9.1.min.js"><\/script>');</script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/main.js"></script>
-
-<script>
-$(document).ready(images);
-$(window).resize(images);
-function images() {
-    $('#vision img').each(function() {
-        var w = (int) $(this).parent().width();
-        var url = "//placehold.it/" + w + "x" + w;
-        $(this).attr("src", url);
-    });
-}
-</script>
     </body>
 </html>
