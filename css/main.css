@@ -93,7 +93,6 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (max-width: 768px) {
     .navigation-bar li a {
         font-size: 20px;
-        padding: 15px 30px;
     }
 }
 

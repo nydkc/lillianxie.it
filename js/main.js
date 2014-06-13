@@ -18,6 +18,28 @@ $('#navigation').on('affix.bs.affix', function() {
 $('#navigation').on('affix-top.bs.affix ', function() {
     $('.tab-content').css('padding-top', 0);
 });
+$('a[data-toggle="tab"]').on('shown.bs.tab', function() {
+    $('html,body').animate({
+        scrollTop: $('.tab-content').offset().top + 1 + $('#navigation.affix').height() - $('#navigation').height()
+    }, 500);
+});
+$(window).scroll(function() {
+    if ($(window).scrollTop() > $('#main').height()) {
+        var x = $(window).scrollTop() - $('#main').height();
+        if (x > 26) {
+            x = 26;
+        }
+        $('#navigation.affix li a').each(function() {
+            $(this).css('padding-top', (20 - (x * .46)));
+            $(this).css('padding-bottom', (20 - (x * .54)));
+        });
+    }
+    else {
+        $('#navigation li a').each(function() {
+            $(this).removeAttr("style");
+        });
+    }
+});
 
 /*
 $(function() {
