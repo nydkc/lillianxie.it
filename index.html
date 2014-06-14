@@ -35,7 +35,7 @@
                     <li><a href="#vision" data-toggle="tab">Vision</a></li>
                     <li><a href="#gallery" data-toggle="tab">Gallery</a></li>
                     <li><a href="#contact" data-toggle="tab">Contact</a></li>
-                    <li><a href="Lillian Xie ICON International Trustee.pdf">Flyer</a></li>
+                    <li><a href="Lillian Xie ICON International Trustee B&W.pdf">Flyer</a></li>
                 </ul>
             </div>
 
@@ -86,7 +86,7 @@
                                 <!-- Indicators -->
                                 <ol class="carousel-indicators">
                                 {% for i in site.data.images %}
-                                    <li data-target="#photo-gallery" data-slide-to="{{forloop.index0}}"{% if forloop.first %} class="active"{% endif %}></li>
+                                    <li data-target="#photo-gallery" data-slide-to="{{ forloop.index0 }}"{% if forloop.first %} class="active"{% endif %}></li>
                                 {% endfor %}
                                 </ol>
 
