@@ -23,8 +23,9 @@ function calculateHeight() {
 $('#navigation .navigation-bar').on('show.bs.collapse', function() {
     $('#navigation .navbar-header .glyphicon').addClass('rotate');
 });
-$('#navigation .navigation-bar').on('hide.bs.collapse', function() {
+$('#navigation .navigation-bar').on('hidden.bs.collapse', function() {
     $('#navigation .navbar-header .glyphicon').removeClass('rotate');
+    $('.tab-content').css('padding-top', $('#navigation.affix').height());
 });
 $('#navigation').affix({
     offset: {
@@ -44,6 +45,9 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function() {
     }, 500);
 });
 $(window).scroll(function() {
+    if ($(window).width() <= 767) {
+        $('.tab-content').css('padding-top', $('#navigation.affix').height());
+    }
     if ($(window).scrollTop() > $('#main').height()) {
         var x = $(window).scrollTop() - $('#main').height();
         if (x > 26) {
