@@ -3,10 +3,29 @@ $(window).resize(calculateHeight);
 function calculateHeight() {
     w = $(window).width();
     h = $(window).height();
+    if (h <= 480) { 
+        $('#main h1').css('font-size', 45);
+        $('#main h2').css('font-size', 25);
+        $('#main img').css('margin-top', 12).css('margin-bottom', 12);
+    }
+    else {
+        $('#main h1').removeAttr('style');
+        $('#main h2').removeAttr('style');
+        $('#main img').removeAttr('style');
+    }
     offset = $('#navigation').height();
     $('#main > div').height(h - offset);
-    $('#main img').height((h - offset)/2);
+    $('#main img').height((h - offset)/2.1);
+    $('#main h1').css('margin-top', h/13);
+    $('#main h2').css('margin-bottom', h/13);
+
 }
+$('#navigation .navigation-bar').on('show.bs.collapse', function() {
+    $('#navigation .navbar-header .glyphicon').addClass('rotate');
+});
+$('#navigation .navigation-bar').on('hide.bs.collapse', function() {
+    $('#navigation .navbar-header .glyphicon').removeClass('rotate');
+});
 $('#navigation').affix({
     offset: {
         top: function() {return $('#main').height();}

@@ -64,6 +64,51 @@ h1, h2, h3, h4, h5, h6 {
     padding-bottom: 6px;
 }
 
+#navigation .navbar-brand {
+    display: none;
+    height: auto;
+    padding-top: 18px;
+    padding-bottom: 12px;
+    font-size: 28px;
+    line-height: 40px;
+    color: #fff;
+    padding-right: 0px;
+}
+
+#navigation .navbar-brand small {
+    color: #ddd;
+    font-size: 80%;
+}
+
+#navigation .navbar-header .navbar-toggle {
+    padding: 9px 13px;
+    margin-top: 15px;
+    margin-bottom: 9px;
+}
+
+#navigation .navbar-header .glyphicon {
+    font-size: 20px;
+    color: #fff;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+}
+
+#navigation .navbar-header .glyphicon.rotate {
+    color: #000;
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}
+
+#navigation.affix .navbar-header {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
 .navigation-bar {
     list-style: none;
     margin: 0 auto;
@@ -90,14 +135,27 @@ h1, h2, h3, h4, h5, h6 {
     color: #00aeef;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
     .navigation-bar li a {
-        font-size: 20px;
+        font-size: 22px;
     }
 }
 
-@media screen and (max-width: 490px) {
+@media screen and (max-width: 767px) {
+    #navigation .navbar-brand {
+        display: block;
+        font-size: 22px;
+    }
+    .navigation-bar li a {
+        font-size: 20px;
+    }
     .navigation-bar li {
         display: block;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #navigation .navbar-brand {
+        font-size: 20px;
     }
 }
