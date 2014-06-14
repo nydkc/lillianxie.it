@@ -15,6 +15,7 @@
 
 body {
     font-family: "Myriad Pro";
+    font-size: 16px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -124,7 +125,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .navigation-bar li a {
     font-size: 24px;
-    padding: 20px 40px;
+    padding: 20px 37px;
 }
  
 .navigation-bar li a,
@@ -136,6 +137,24 @@ h1, h2, h3, h4, h5, h6 {
 .navigation-bar li.active a {
     background: #fff;
     color: #00aeef;
+}
+
+#about h4 {
+    margin-top: 20px;
+    line-height: 1.4;
+}
+
+#hello {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#photo-gallery img {
+    margin: auto;
+}
+
+#photo-gallery .carousel-control {
+    background: none;
 }
 
 @media screen and (max-width: 992px) {
