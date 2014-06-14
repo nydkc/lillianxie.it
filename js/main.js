@@ -38,6 +38,7 @@ $('#navigation').on('affix-top.bs.affix ', function() {
     $('.tab-content').css('padding-top', 0);
 });
 $('a[data-toggle="tab"]').on('shown.bs.tab', function() {
+    $('#navigation .navigation-bar').collapse('hide');
     $('html,body').animate({
         scrollTop: $('.tab-content').offset().top + 1 + $('#navigation.affix').height() - $('#navigation').height()
     }, 500);
