@@ -43,13 +43,14 @@ h1, h2, h3, h4, h5, h6 {
 
 #main img {
     margin: 24px auto;
+    height: 250px;
     display: block;
     border-radius: 50%;
 }
 
 #main h2 {
     font-size: 36px;
-    margin-bottom: 50px;
+    margin-top: 10px;
 }
 
 #navigation {
@@ -149,6 +150,76 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 20px;
 }
 
+.flier-wrapper {
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    z-index: 51;
+    top: 0;
+    left: 0;
+    -webkit-transition: left .2s ease-out;
+    -moz-transition: left .2s ease-out;
+    -o-transition: left .2s ease-out;
+    transition: left .2s ease-out;
+}
+
+div.overlay {
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+}
+
+div.overlay .text-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+div.overlay h1 {
+    position: absolute;
+    display: block;
+    top: 50%;
+    margin-top: -20px;
+    left: 50%;
+}
+
+div.overlay.bw-overlay h1 {
+    margin-left: -120px;
+}
+
+div.overlay.bw-overlay h1.visible-xs {
+    margin-left: -41px;
+}
+
+div.overlay.color-overlay h1 {
+    margin-left: -47px;
+}
+
+.bw-overlay {
+    background-color: #aaa;
+    color: #fff;
+}
+ 
+.color-overlay {
+    background-color: #036;
+    color: #fff;
+}
+
+img.overlay.bw-image {
+    left: 100%;
+}
+
+img.overlay.color-image {
+    left: -100%;
+}
+
+.flier-wrapper:hover .overlay {
+    left: 0;
+    right: 0;
+}
+ 
 #photo-gallery img {
     margin: auto;
 }

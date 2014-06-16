@@ -15,10 +15,8 @@ function calculateHeight() {
     }
     offset = $('#navigation').height();
     $('#main > div').height(h - offset);
-    $('#main img').height((h - offset)/2.1);
+    $('#main img').height((h - offset)/2.4);
     $('#main h1').css('margin-top', h/13);
-    $('#main h2').css('margin-bottom', h/13);
-
 }
 $('#navigation .navigation-bar').on('show.bs.collapse', function() {
     $('#navigation .navbar-header .glyphicon').addClass('rotate');
