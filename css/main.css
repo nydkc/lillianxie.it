@@ -224,10 +224,6 @@ img.overlay.color-image {
     margin: auto;
 }
 
-#photo-gallery .carousel-control {
-    background: none;
-}
-
 @media screen and (max-width: 992px) {
     .navigation-bar li a {
         font-size: 22px;
