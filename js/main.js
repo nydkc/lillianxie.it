@@ -22,8 +22,10 @@ function calculateHeight() {
 $('#navigation .navigation-bar').on('show.bs.collapse', function() {
     $('#navigation .navbar-header .glyphicon').addClass('rotate');
 });
-$('#navigation .navigation-bar').on('hidden.bs.collapse', function() {
+$('#navigation .navigation-bar').on('hide.bs.collapse', function() {
     $('#navigation .navbar-header .glyphicon').removeClass('rotate');
+});
+$('#navigation .navigation-bar').on('hidden.bs.collapse', function() {
     $('.tab-content').css('padding-top', $('#navigation.affix').height());
 });
 $('#navigation').affix({
