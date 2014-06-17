@@ -252,3 +252,138 @@ img.overlay.color-image {
         font-size: 20px;
     }
 }
+
+.social-buttons {
+    margin: auto;
+    width: 518px;
+}
+
+.slide-social {
+    display: inline-block;
+    overflow: hidden;
+    margin: 0 10px 10px 0;
+    width: 160px;
+    height: 48px;
+    background: #F1F1F1;
+}
+
+.slide-social .button {
+    position: absolute;
+    margin: 15px 0 0 55px;
+    font-weight: 700;
+}
+
+.slide-social .icon {
+    float: left;
+    padding-top: 15px;
+    width: 25%;
+    height: 100%;
+    text-align: center;
+}
+
+.slide-social .icon i {
+    color: #FFF;
+    font-size: 1.2em;
+}
+
+.slide-social .slide {
+    position: relative;
+    float: left;
+    width: 75%;
+    height: 100%;
+}
+
+.slide-social .slide p {
+    position: relative;
+    top: 15px;
+    margin: 0;
+    border-left: 1px solid rgb(255,255,255); /* IE < 9 Fallback Colour */
+    border-left: 1px solid rgba(255,255,255,0.3);
+    color: #FFF;
+    text-align: center;
+    font-weight: 700;
+}
+
+/* Brand Colours */
+
+.facebook {
+    background: #3b5998;
+}
+
+.twitter {
+    background: #00acee;
+}
+
+.instagram {
+    background: #3f729b;
+}
+
+/* Slide Animation */
+
+.slide-social:hover .slide {
+    -webkit-transform: translate(101%, 0);
+    -moz-transform: translate(101%, 0);
+    -ms-transform: translate(101%, 0);
+    -o-transform: translate(101%, 0);
+    transform: translate(101%, 0);
+}
+
+.no-cssanimations .slide-social .slide {
+    display: none; /* hide in IE 8-9 */
+}
+
+.touch .slide-social .slide {
+    display: none; /* hide on touch devices */
+}
+
+/* Transition */
+
+.slide-social .slide {
+    -webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 560px) {
+    .social-buttons {
+        width: 100%;
+    }
+
+    .slide-social {
+        width: 100%;
+    }
+
+    .slide-social .button {
+        position: absolute;
+        margin-left: 50%;
+    }
+
+    .slide-social .facebook-button {
+        margin-left: 47%;
+    }
+
+    .slide-social .twitter-button {
+        margin-left: 49%;
+    }
+
+    .slide-social .instagram-button {
+        margin-left: 46%;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .slide-social .facebook-button {
+        margin-left: 46%;
+    }
+
+    .slide-social .twitter-button {
+        margin-left: 48%;
+    }
+
+    .slide-social .instagram-button {
+        margin-left: 44%;
+    }
+}
