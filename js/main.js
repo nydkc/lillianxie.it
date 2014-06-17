@@ -17,7 +17,7 @@ function calculateHeight() {
     $('#main > div').height(h - offset);
     $('#main img').height((h - offset)/2.4);
     $('#main h1').css('margin-top', h/13);
-    $('.tab-content').height(h);
+    $('.tab-content').height(h + 1);
 }
 $('#navigation .navigation-bar').on('show.bs.collapse', function() {
     $('#navigation .navbar-header .glyphicon').addClass('rotate');
