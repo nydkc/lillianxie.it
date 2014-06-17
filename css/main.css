@@ -154,7 +154,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 20px;
 }
 
-.flier-wrapper {
+.flyer-wrapper {
     overflow: hidden;
 }
 
@@ -219,7 +219,7 @@ img.overlay.color-image {
     left: -100%;
 }
 
-.flier-wrapper:hover .overlay {
+.flyer-wrapper:hover .overlay {
     left: 0;
     right: 0;
 }
