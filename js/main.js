@@ -39,10 +39,12 @@ $('#navigation').on('affix.bs.affix', function() {
 $('#navigation').on('affix-top.bs.affix ', function() {
     $('.tab-content').css('padding-top', 0);
 });
-$('a[data-toggle="tab"]').on('shown.bs.tab', function() {
-    $('#navigation .navigation-bar').collapse('hide');
+$('a[data-toggle="tab"]').on('show.bs.tab', function() {
+    if ($(window).width() <= 767) {
+        $('#navigation .navigation-bar').collapse('hide');
+    }
     $('html,body').animate({
-        scrollTop: $('.tab-content').offset().top + 1 + $('#navigation.affix').height() - $('#navigation').height()
+        scrollTop: $('.tab-content').offset().top + $('#navigation.affix').height() - $('#navigation').height() + 1
     }, 500);
 });
 $(window).scroll(function() {
@@ -64,7 +66,7 @@ $(window).scroll(function() {
             $(this).removeAttr("style");
         });
     }
-    $('.tab-content').height($(window).height() - $('#navigation.affix').height() + 1);
+    $('.tab-content').height($(window).height() - $('#navigation.affix').height() - $('.tab-content').css('padding-top') + 1);
 });
 
 /*

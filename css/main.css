@@ -1,12 +1,12 @@
 @font-face {
     font-family: "Myriad Pro";
     font-weight: 400;
-    src: url(../fonts/myriad-pro.otf) format("truetype");
+    src: url(../fonts/myriad-pro.otf) format("opentype");
 }
 @font-face {
     font-family: "Myriad Pro";
     font-weight: 700;
-    src: url(../fonts/myriad-pro-bold.otf) format("truetype");
+    src: url(../fonts/myriad-pro-bold.otf) format("opentype");
 }
 @font-face {
     font-family: "Century Gothic";
@@ -14,12 +14,12 @@
 }
 
 body {
-    font-family: "Myriad Pro";
+    font-family: "Myriad Pro", "Helvetica Neue", Arial, sans-serif;
     font-size: 16px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Century Gothic";
+    font-family: "Century Gothic", "Helvetica Neue", Arial, sans-serif;
     font-weight: 400;
 }
 
@@ -249,14 +249,15 @@ img.overlay.color-image {
 }
 
 @media screen and (max-width: 380px) {
-    #navigation .navbar-brand {
-        font-size: 20px;
+    #navigation .navbar-brand small {
+        display: none;
     }
 }
 
 .social-buttons {
     margin: auto;
-    width: 518px;
+    width: auto;
+    text-align: center;
 }
 
 .slide-social {
