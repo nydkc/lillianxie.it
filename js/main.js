@@ -64,6 +64,7 @@ $(window).scroll(function() {
             $(this).removeAttr("style");
         });
     }
+    $('.tab-content').height($(window).height() - $('#navigation.affix').height() + 1);
 });
 
 /*
