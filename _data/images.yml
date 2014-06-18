@@ -7,14 +7,29 @@
 - url: img/pacoicon2013camp.jpg
   description: PACO the penguin! 
 
+- url: img/zackicon2013.jpg
+  description: With current International Trustee, Zachary Waldorf!
+
 - url: img/divisionalkccamp.jpg
   description: Hosting a Divisional meeting as LTG
 
 - url: img/dtccamp.jpg
   description: Leading a Workshop at a Divisional Training Conference
 
+- url: img/ltchuntergroup.jpg
+  description: Home Club at LTC (NY DCON) 2014
+
+- url: img/jdrfcamp.jpg
+  description: Volunteering at JDRF Walk!
+
 - url: img/hkdbfcamp.jpg
   description: Hong Kong Dragon Boat Festival
+
+- url: img/namiwalkcamp.jpg
+  description: Helping out at NAMI Walk
+
+- url: img/storybystorycamp.jpg
+  description: Story by Story stair climb
 
 - url: img/icon2013camp3.jpg
   description: New York at ICON 2013!
@@ -22,17 +37,5 @@
 - url: img/icon2013luvkccamp.jpg
   description: ICON 2013 Loves Key Club
 
-- url: img/jdrfcamp.jpg
-  description: Volunteering at JDRF Walk!
-
-- url: img/namiwalkcamp.jpg
-  description: Helping out at NAMI Walk
-
-- url: img/ltchuntergroup.jpg
-  description: Home Club at LTC (NY DCON) 2014
-
 - url: img/singleGOODicon2013camp.jpg
   description: Representing New York District at ICON 2013!
-
-- url: img/storybystorycamp.jpg
-  description: Story by Story stair climb
