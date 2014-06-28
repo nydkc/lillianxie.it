@@ -57,8 +57,9 @@ $('a[data-toggle="tab"]').on('show.bs.tab', function() {
     }, 500);
 });
 $(window).scroll(function() {
-    $('#scroll-more').hide();
-    $.cookie('hidden-scroll', 'yes', {expires: 7});
+    $('#scroll-more:visible').hide(function() {
+        $.cookie('hidden-scroll', 'yes', {expires: 7});
+    });
     if ($(window).width() <= 767) {
         $('.tab-content').css('padding-top', $('#navigation.affix').height());
     }
