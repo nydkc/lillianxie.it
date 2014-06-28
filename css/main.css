@@ -408,3 +408,18 @@ img.overlay.color-image {
         margin-left: 44%;
     }
 }
+
+#scroll-more {
+    position: fixed;
+    padding: 10px 15px;
+    width: 150px;
+    margin-left: -75px;
+    bottom: 100px;
+    left: 50%;
+    background: rgba(255,255,255,.7);
+    border-radius: 5px;
+}
+
+#scroll-more h3 {
+    margin: 0;
+}

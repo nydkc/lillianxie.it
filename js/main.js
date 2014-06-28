@@ -1,3 +1,7 @@
+if ($.cookie('hidden-scroll') == 'yes') {
+    $('#scroll-more').hide();
+}
+
 $(document).ready(calculateHeight);
 $(window).resize(calculateHeight);
 function calculateHeight() {
@@ -21,6 +25,11 @@ function calculateHeight() {
 }
 $('#navigation .navigation-bar').on('show.bs.collapse', function() {
     $('#navigation .navbar-header .glyphicon').addClass('rotate');
+    if ($(window).scrollTop() < $('#main').height()) {
+        $('html,body').animate({
+            scrollTop: $('.tab-content').offset().top + $('#navigation.affix').height() - $('#navigation').height() + 1
+        }, 500);
+    }
 });
 $('#navigation .navigation-bar').on('hide.bs.collapse', function() {
     $('#navigation .navbar-header .glyphicon').removeClass('rotate');
@@ -48,6 +57,8 @@ $('a[data-toggle="tab"]').on('show.bs.tab', function() {
     }, 500);
 });
 $(window).scroll(function() {
+    $('#scroll-more').hide();
+    $.cookie('hidden-scroll', 'yes', {expires: 7});
     if ($(window).width() <= 767) {
         $('.tab-content').css('padding-top', $('#navigation.affix').height());
     }
@@ -69,29 +80,23 @@ $(window).scroll(function() {
     $('.tab-content').height($(window).height() - $('#navigation.affix').height() - $('.tab-content').css('padding-top') + 1);
 });
 
-(function( $ ){
+(function($){
     $.fn.fitVids = function( options ) {
-
         var settings = {
             customSelector: null
         }
-
         if ( options ) {
             $.extend( settings, options );
         }
-
         return this.each(function(){
         var selectors = [
             "iframe[src^='http://www.youtube.com']",
             "iframe[src^='//www.youtube.com']",
         ];
-
         if (settings.customSelector) {
             selectors.push(settings.customSelector);
         }
-
         var $allVideos = $(this).find(selectors.join(','));
-
         $allVideos.each(function(){
             var $this = $(this);
             if (this.tagName.toLowerCase() == 'embed' && $this.parent('object').length || $this.parent('.fluid-width-video-wrapper').length) { return; }
@@ -101,7 +106,6 @@ $(window).scroll(function() {
                 $this.removeAttr('height').removeAttr('width');
             });
         });
-
     }
 })( jQuery );
 /*
