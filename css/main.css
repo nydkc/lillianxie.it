@@ -23,6 +23,10 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
 }
 
+h1 {
+    line-height: 1.3;
+}
+
 #main .content {
     display: table;
     margin: 0 auto;
@@ -223,6 +227,20 @@ img.overlay.color-image {
 .flyer-wrapper:hover .overlay {
     left: 0;
     right: 0;
+}
+
+.fluid-width-video-wrapper {
+    padding-top: 56.5%;
+    width: 100%;
+    position: relative;
+}
+
+#campaign-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
  
 #photo-gallery img {
