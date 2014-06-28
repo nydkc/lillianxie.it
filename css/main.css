@@ -50,6 +50,7 @@ h1 {
     height: 250px;
     display: block;
     border-radius: 50%;
+    -moz-border-radius: 50%;
 }
 
 #main h2 {
